@@ -1,14 +1,14 @@
 /*
- * @FilePath: \CppServer-Win\day01\server.cpp
+ * @FilePath: \cppServer-Win\day01\server.cpp
  * @Description:  
  * @Author: rthete
  * @Date: 2023-02-28 15:56:08
- * @LastEditTime: 2023-02-28 19:53:00
+ * @LastEditTime: 2023-03-02 17:26:39
  */
 
 #include <iostream>
-#include <winsock2.h>   // 网络头文件，Windows socket第二版
-#pragma comment (lib, "ws2_32.lib")  // 加载网络库，Windows socket第二版，32位
+#include <winsock2.h>                   // 网络头文件，Windows socket第二版
+#pragma comment (lib, "ws2_32.lib")     // 加载网络库，Windows socket第二版，32位
 #define socklen_t int
 using namespace std;
 
@@ -17,7 +17,8 @@ int main() {
     // WSAStartup是为了向操作系统说明，我们要用哪个库文件，
     // 让该库文件与当前的应用程序绑定，从而就可以调用该版本
     // 的socket的各种函数。
-    WSADATA wsadata;    
+    WSADATA wsadata;
+        
     // 校验版本
 	if (0 == WSAStartup(MAKEWORD(2, 2), &wsadata))
 	{
